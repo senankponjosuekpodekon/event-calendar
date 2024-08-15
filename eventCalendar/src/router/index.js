@@ -59,7 +59,7 @@ const router = createRouter({
       path: '/event-calendar',
       name: 'eventcalendar',
       component: EventCalendarView,
-      meta: { requiresAuth: true },
+      //meta: { requiresAuth: true },
     },
   ]
 });

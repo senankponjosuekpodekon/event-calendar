@@ -20,6 +20,8 @@ export const useTodoStore = defineStore('todo', {
   	const authStore = useAuthStore();
   	this.todos.push({
     	id: Date.now(),
+		startDate: new Date().toLocaleString(),
+		endDate: new Date().toLocaleString(),
     	...todo,
     	userEmail: authStore.user.email, // create todo only for connected user
     	createdDate: new Date().toLocaleString(),
@@ -31,6 +33,8 @@ export const useTodoStore = defineStore('todo', {
   	const index = this.todos.findIndex(todo => todo.id === updatedTodo.id);
   	if (index !== -1) {
     	this.todos[index] = {
+		startDate: new Date().toLocaleString(),
+		endDate: new Date().toLocaleString(),
       	...updatedTodo,
       	lastModifiedDate: new Date().toLocaleString()
     	};
@@ -59,6 +63,14 @@ export const useTodoStore = defineStore('todo', {
       	key: 'status',
       	label: 'Status'
     	},
+		{
+		key: 'startDate',
+		label: 'Start Date'
+		},
+		{
+		key: 'endDate',
+		label: 'End Date'
+		},
     	{
       	key: 'createdDate',
       	label: 'Created Date'

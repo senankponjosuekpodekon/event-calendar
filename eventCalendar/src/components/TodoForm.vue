@@ -15,6 +15,21 @@
         placeholder="Type task name"
         required
       />
+      <!-- <input type="date" id="name"> -->
+      <StartDate 
+      label="Name"
+      id="startDate"
+      v-model="todo.startDate"
+      placeholder="Type start date"
+      required
+      />
+      <EndDate 
+      label="Name"
+      id="endDate"
+      v-model="todo.endDate"
+      placeholder="Type end date"
+      required
+      />
       <TodoDropdown
         label="Name"
         id="name"
@@ -39,6 +54,9 @@ import { useTodoStore } from '@/stores/todo'
 import TodoInput from './Form/TodoInput.vue'
 import TodoTextBox from './Form/TodoTextBox.vue'
 import TodoDropdown from './Form/TodoDropdown.vue'
+import StartDate from './Form/StartDate.vue'
+import EndDate from './Form/EndDate.vue'
+
 
 const emit = defineEmits(['close-modal'])
 
@@ -52,6 +70,8 @@ const tasksStore = useTodoStore()
 const todo = ref({
   name: '',
   description: '',
+  startDate: 'new Date()',
+  endDate: '',
   status: 'todo'
 })
 

@@ -18,7 +18,7 @@ import router from './router'
 const vuetify = createVuetify({
     components,
     directives,
-})
+  })
 
 const app = createApp(App)
 
@@ -27,6 +27,4 @@ app.use(router)
 
 // app.mount('#app')
 
-app.use(vuetify)
-
-app.mount('#app')
+createApp(App).use(vuetify).mount('#app')

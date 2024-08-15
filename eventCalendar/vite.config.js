@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    //vuetify({ autoImport: true }), // Enabled by default
   ],
   resolve: {
     alias: {
