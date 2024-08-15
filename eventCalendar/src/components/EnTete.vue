@@ -5,7 +5,7 @@
         <div class="mr-auto md:w-48 flex-shrink-0 cursor-pointer">
           <a @click="homeLand"><img class="h-18 md:h-20" src="@/assets/images/logo/logo2.svg" alt="logo" id="logo"></a>
         </div>
-  
+        <div class="ps-8">
         <!-- navigation -->
         <div class="text-gray-500 order-3 w-full md:w-auto md:order-2" id="dash">
           <ul class="flex font-semibold justify-between cursor-pointer" v-if="authStore.user">
@@ -20,6 +20,8 @@
             <li class="md:px-4 md:py-2 text-indigo-500"><a @click="navigateToCalendar">Calendar</a></li>
           </ul>
         </div>
+
+      </div>
   
         <!-- signup/signin or logout button -->
         <div class="order-2 md:order-3 flex pl-16" id="dashn">
