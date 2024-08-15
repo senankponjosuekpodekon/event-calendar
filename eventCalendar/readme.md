@@ -1,4 +1,4 @@
-# TaskStia project
+# CaldStia project
 Welcome -and thank to join this project. This readme is a guide to help you test or participate to this project; the one is about set up  web application to manage your tasks.
 ***
 ***
@@ -7,16 +7,16 @@ Welcome -and thank to join this project. This readme is a guide to help you test
 -   TaildwindCss 
 
 ## Considerations
-As mentionned previously, the base project is configured to manage easily your to-do tasks.
+As mentionned previously, the base project is configured to manage easily your Agenda.
 
 ## Organisation 
-This project is made up one part: it contains the containers, views, routes, two stores and the use of the store: one to manage the to do tasks, one to manage the authentification.
+This project is made up one part: it contains the containers, views, routes, three stores and the use of the store: one to manage the to do tasks, one to manage the authentification and one to calendar.
 
 
 ## Getting started 
 Firt, you will have to clone the project from github.
 
-Then, move into the "Todo/" folder
+Then, move into the "eventCalendar/" folder
 
 
 ### Frontend part
@@ -39,7 +39,7 @@ to install the dependencies of the project.
 
 ### Signup/Signin
 
-To signup/Signin on TaskStia, go to the signup/signin page, insert required information.
+To signup/Signin on CaldStia, go to the signup/signin page, insert required information.
 
 ### Add/Update/Delete
 
