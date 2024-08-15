@@ -66,7 +66,7 @@
                 {{ date }}
               </div>
               <div style="height: 80px;" class="overflow-y-auto mt-1">
-                <template v-for="event in eventsForDate(date)">
+                <div v-for="event in eventsForDate(date)" :key="event.id">
                   <div
                     class="px-2 py-1 rounded-lg mt-1 overflow-hidden border"
                     :class="{
@@ -79,7 +79,7 @@
                   >
                     <p class="text-sm truncate leading-tight">{{ event.event_title }}</p>
                   </div>
-                </template>
+                </div>
               </div>
             </div>
           </div>
