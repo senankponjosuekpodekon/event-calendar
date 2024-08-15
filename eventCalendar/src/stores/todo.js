@@ -71,14 +71,18 @@ export const useTodoStore = defineStore('todo', {
 		key: 'endDate',
 		label: 'End Date'
 		},
+		{
+		key: 'eventPlace',
+		label: 'Event Place'
+	  	},
     	{
       	key: 'createdDate',
       	label: 'Created Date'
     	},
-    	{
-      	key: 'lastModifiedDate',
-      	label: 'Last Modified Date'
-    	}
+    	// {
+      	// key: 'lastModifiedDate',
+      	// label: 'Last Modified Date'
+    	// }
   	];
 	}
   }

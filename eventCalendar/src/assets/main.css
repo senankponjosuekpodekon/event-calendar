@@ -2,6 +2,11 @@
 @import '../index.css';
 @import '../output.css';
 
+body {
+  background-color: #eebd5573;
+  
+  /* height: auto; */
+}
 
 /* #app {
   max-width: 1280px;

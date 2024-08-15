@@ -3,7 +3,7 @@
       <div class="container mx-auto px-4 py-8 flex items-center">
         <!-- logo -->
         <div class="mr-auto md:w-48 flex-shrink-0 cursor-pointer">
-          <a @click="homeLand"><img class="h-18 md:h-20" src="@/assets/images/logo/logo.svg" alt="logo" id="logo"></a>
+          <a @click="homeLand"><img class="h-18 md:h-20" src="@/assets/images/logo/logo2.svg" alt="logo" id="logo"></a>
         </div>
   
         <!-- navigation -->

@@ -1,21 +1,24 @@
 <script>
 import EventCalendar from '@/components/EventCalendar.vue'
 
-export default {
-      name: "App",
-      components: {
-        EventCalendar
-      },
-      data: () => ({
+// export default {
+//       name: "App",
+//       components: {
+//         EventCalendar
+//       },
+//       data: () => ({
 
-      })
-    };
+//       })
+//     };
 </script>
 
 <template>
-  <v-app>
-    <v-content>
+  <!-- <v-app>
+    <v-content> -->
+    <main>
       <EventCalendar />
-    </v-content>
-  </v-app>
+
+    </main>
+    <!-- </v-content>
+  </v-app> -->
 </template>

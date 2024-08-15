@@ -52,12 +52,12 @@ export default {
               <h1
                 class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
               >
-                Todo App, Are you an entrepreneur? Be updated for your plan from Today!
+                Calendar App, Are you an entrepreneur? Be updated for your plan from Days to Days!
               </h1>
               <p
                 class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]"
               >
-                Todo Web App Built with Favourite
+                Calendar Web App Built with Favourite
                 Technology - Tailwind and VueJs.
               </p>
               <ul

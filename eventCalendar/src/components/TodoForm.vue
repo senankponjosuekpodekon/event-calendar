@@ -30,6 +30,14 @@
       placeholder="Type end date"
       required
       />
+      <EventPlace
+        label="Name"
+        id="name"
+        v-model="todo.eventPlace"
+        placeholder="Type Event Place"
+        required
+      />
+    </div>
       <TodoDropdown
         label="Name"
         id="name"
@@ -38,7 +46,6 @@
         placeholder="Type task name"
         required
       />
-    </div>
     <button
       type="submit"
       class="inline-flex items-center rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
@@ -56,6 +63,7 @@ import TodoTextBox from './Form/TodoTextBox.vue'
 import TodoDropdown from './Form/TodoDropdown.vue'
 import StartDate from './Form/StartDate.vue'
 import EndDate from './Form/EndDate.vue'
+import EventPlace from './Form/EventPlace.vue'
 
 
 const emit = defineEmits(['close-modal'])
@@ -72,6 +80,7 @@ const todo = ref({
   description: '',
   startDate: 'new Date()',
   endDate: '',
+  eventPlace: '',
   status: 'todo'
 })
 
