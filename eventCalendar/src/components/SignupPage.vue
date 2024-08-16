@@ -73,7 +73,7 @@ export default {
 
     const validateForm = () => {
       if (!name.value || !/^[A-Za-z][A-Za-z0-9_]{5,10}$/.test(name.value)) {
-        authStore.errorMessage = 'Name is required.';
+        authStore.errorMessage = 'Name is required, Write something like Jonathan...';
         return false;
       }
     //'password' => 'required|confirmed|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/',
