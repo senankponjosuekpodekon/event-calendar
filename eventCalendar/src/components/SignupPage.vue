@@ -1,20 +1,20 @@
 <template>
   <div class="font-[sans-serif] max-w-4xl flex items-center mx-auto md:h-screen p-4">
     <div class="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl overflow-hidden">
-      <div class="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4">
+      <div class="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-blue-900 to-blue-700 lg:px-8 px-4 py-4">
         <div>
           <h4 class="text-white text-lg font-semibold">Create Your Account</h4>
-          <p class="text-[13px] text-gray-300 mt-3 leading-relaxed">Welcome to our TaskStia page! Get started by creating your account.</p>
+          <p class="text-[13px] text-white mt-3 leading-relaxed">Welcome to our TaskStia page! Get started by creating your account.</p>
         </div>
         <div>
           <h4 class="text-white text-lg font-semibold">Simple & Secure Registration</h4>
-          <p class="text-[13px] text-gray-300 mt-3 leading-relaxed">Our registration process is designed to be straightforward and secure. We prioritize your privacy and data security.</p>
+          <p class="text-[13px] text-white mt-3 leading-relaxed">Our registration process is designed to be straightforward and secure. We prioritize your privacy and data security.</p>
         </div>
       </div>
 
       <form @submit.prevent="navigateToSignup" class="md:col-span-2 w-full py-6 px-6 sm:px-16 bg-white">
         <div class="mb-6">
-          <h3 class="text-gray-800 text-2xl font-bold">Create an account</h3>
+          <h3 class="text-blue-800 text-2xl font-bold">Create an account</h3>
         </div>
 
         <div v-if="authStore.errorMessage" class="mb-4">
@@ -27,7 +27,7 @@
           <div>
             <label class="text-gray-800 text-sm mb-2 block">Name</label>
             <div class="relative flex items-center">
-              <input v-model="name" name="name" type="text" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter name 6 characters, Major and minor" />
+              <input v-model="name" name="name" type="text" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter a name" />
             </div>
           </div>
 
@@ -44,10 +44,17 @@
               <input v-model="password" name="password" type="password" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter password" />
             </div>
           </div>
+
+          <!-- <div>
+            <label class="text-gray-800 text-sm mb-2 block">Password</label>
+            <div class="relative flex items-center">
+              <input v-model="password_confirm" name="password_confirm" type="password" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Repeat password" />
+            </div>
+          </div> -->
         </div>
 
         <div class="!mt-12">
-          <button type="submit" class="w-full py-3 px-4 tracking-wider text-sm rounded-md text-white bg-gray-700 hover:bg-gray-800 focus:outline-none">
+          <button type="submit" class="w-full py-3 px-4 tracking-wider text-sm rounded-md text-white bg-blue-700 hover:bg-blue-800 focus:outline-none">
             Create an account
           </button>
         </div>
@@ -70,13 +77,13 @@ export default {
     const name = ref('');
     const email = ref('');
     const password = ref('');
+    //const password_confirm = ref('');
 
     const validateForm = () => {
-      if (!name.value || !/^[A-Za-z][A-Za-z0-9_]{5,10}$/.test(name.value)) {
-        authStore.errorMessage = 'Name is required, Write something like Jonathan..., 6 characters minimum composed of major and minor characters';
+      if (!name.value) {
+        authStore.errorMessage = 'Name is required.';
         return false;
       }
-    //'password' => 'required|confirmed|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/',
 
       if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
         authStore.errorMessage = 'A valid email is required.';
@@ -86,6 +93,10 @@ export default {
         authStore.errorMessage = 'Password must be at least 8 characters long, Contains major, minor characters, specials and numbers.';
         return false;
       }
+      // if (password.value !== password_confirm.value) {
+      //   authStore.errorMessage = 'Password must be the same.';
+      //   return false;
+      // }
       authStore.errorMessage = null;
       return true;
     };

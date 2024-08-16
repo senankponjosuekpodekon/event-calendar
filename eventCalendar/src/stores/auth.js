@@ -16,6 +16,9 @@ export const useAuthStore = defineStore('auth', {
         if (usersDatabase[email]) {
           throw new Error('User already exists');
         }
+        // if (password.value !== password_confirm.value) {
+        //   throw new Error('Password must be the same.');
+        // }
         usersDatabase[email] = { name, password };
         setUsersDatabase(usersDatabase);
 
