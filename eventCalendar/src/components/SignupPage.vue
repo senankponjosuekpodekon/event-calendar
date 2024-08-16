@@ -27,7 +27,7 @@
           <div>
             <label class="text-gray-800 text-sm mb-2 block">Name</label>
             <div class="relative flex items-center">
-              <input v-model="name" name="name" type="text" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter name" />
+              <input v-model="name" name="name" type="text" required class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500" placeholder="Enter name 6 characters, Major and minor" />
             </div>
           </div>
 
